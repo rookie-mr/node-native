@@ -1,0 +1,24 @@
+{
+  "name": "node-native",
+  "version": "1.0.0",
+  "description": "原生node开发",
+  "main": "server.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.5",
+    "node-excel-export": "^1.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rookie-mr/node-native.git"
+  },
+  "author": "zhanggp",
+  "license": "ISC"
+}

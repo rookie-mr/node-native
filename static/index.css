@@ -1,0 +1,595 @@
+/*CSSreset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  min-width: 1250px;
+  font-size: 12px;
+  font-family: "微软雅黑";
+}
+
+html.gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+
+/*背景音乐样式*/
+
+#bgm_btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 70px;
+  right: 70px;
+  z-index: 10000;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px #fff;
+  background: url(images/music.png) no-repeat center center;
+  background-size: 60%;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+  animation: rotate 2s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*公共样式*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+  font-family: "楷体";
+  src: url('fonts/STKAITI.TTF');
+}
+
+@font-face {
+  font-family: "华文行楷";
+  src: url('fonts/STXINGKA.TTF');
+}
+
+@font-face {
+  font-family: "华文琥珀";
+  src: url('fonts/STHUPO.TTF');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "华文琥珀";
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*页面banner、nav*/
+
+header {
+  background-color: #CED7DF;
+}
+
+header div.container {
+  height: 662px;
+  padding: 50px 15px 0 15px;
+}
+
+div.top_nav {
+  width: 33.33%;
+  height: 100%;
+  padding: 18px 15px 0 15px;
+  float: left;
+}
+
+div.top_nav p {
+  color: #888;
+  font-size: 100px;
+  font-family: "楷体";
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+div.top_nav ul {
+  margin-top: 40px;
+}
+
+div.top_nav ul li {
+  line-height: 3.5em;
+  margin: 20px 0;
+}
+
+div.top_nav ul li:hover a {
+  transition: 1s;
+  background-color: #323B43;
+  color: #fff;
+}
+
+div.top_nav ul li a {
+  font-size: 17px;
+  font-family: "华文行楷";
+  font-weight: 600;
+  display: inline-block;
+  padding: 0 100px;
+  background: #fff;
+  color: #323B43;
+}
+
+div.self_banner {
+  width: 64.66%;
+  height: 110%;
+  float: left;
+  background: url("images/po.png") no-repeat right bottom;
+  background-size: contain;
+}
+
+/*自我介绍*/
+
+#self_intro {
+  height: 541px;
+  background: #76B852;
+  text-align: center;
+  padding: 80px 0;
+  color: #323B43;
+}
+
+#self_intro h3, h4 {
+  color: #323B43;
+  margin-bottom: 20px;
+}
+
+#self_intro h4 {
+  font-size: 16px;
+}
+
+#self_intro p {
+  width: 90%;
+  text-align: left;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+#self_intro ul {
+  width: 50%;
+  float: left;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+#self_intro ul>li {
+  font-size: 16px;
+  padding: 0 50px;
+  text-align: left;
+}
+
+#self_intro ul>li p {
+  padding: 10px;
+}
+
+/*特长、技能介绍*/
+
+#skills {
+  height: 498px;
+  background: #323B43;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#skills h2 {
+  color: #CED7DF;
+  margin-bottom: 50px;
+}
+
+/*作品展示区域*/
+
+#opus {
+  height: 1052px;
+  background: #CED7DF;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#opus h3 {
+  color: #76B852;
+}
+
+#opus ul {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+#opus ul li {
+  float: left;
+  margin: 4px;
+  padding: 8px 14.5px;
+  background: #fff;
+  position: relative;
+}
+
+#opus ul li div {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(220, 220, 220, 0.9);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+#opus ul li a {
+  display: block;
+  height: auto;
+}
+
+#opus ul li div h5 {
+  margin: 100px auto;
+  color: #333;
+}
+
+/*蒙版及其内容样式*/
+
+#shade {
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(210, 210, 210, .7);
+  position: fixed;
+  z-index: 100;
+}
+
+#detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -128px 0 0 -176.5px;
+  width: 353px;
+  height: 256px;
+}
+
+#bt-close {
+  position: absolute;
+  cursor: pointer;
+}
+
+/*特色服务区域*/
+
+#services {
+  height: 738px;
+  background: #59626A;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#services>div>h3 {
+  color: #76B852;
+}
+
+#services ul {
+  margin: 50px 0;
+}
+
+#services ul li {
+  width: 33.33%;
+  height: 265px;
+  float: left;
+  position: relative;
+  padding: 0 10px;
+  padding-top: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#services ul li div h3 {
+  font-size: 16px;
+}
+
+#services ul li div p {
+  font-size: 14px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #76b852;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  line-height: 100px;
+}
+
+.icon span {
+  z-index: 100;
+}
+
+.icon img {
+  padding: 23px 0 0 0;
+  position: relative;
+  z-index: 100;
+  transition: all 0.3s ease 0s;
+}
+
+.icon:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #323b43;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+}
+
+.grid:hover .icon img {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.grid:hover .icon:before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.icon.opp {
+  background: #323b43;
+}
+
+.icon.opp:before {
+  background: #76b852;
+}
+
+.grid h3 {
+  padding: 20px 0;
+  color: #CED7DF;
+  font-size: 16px;
+  font-family: '微软雅黑';
+}
+
+/*get in tuoch区域*/
+
+#contact {
+  height: 348px;
+  padding: 80px 0;
+  text-align: center;
+  background: #CED7DF;
+}
+
+#contact h2 {
+  color: #76B852;
+}
+
+#contact h5 {
+  margin: 12px;
+}
+
+#contact p {
+  font-size: 14px;
+}
+
+/*访客留言区域*/
+
+#message {
+  height: 697px;
+  padding: 80px;
+  text-align: center;
+  background: #76B852;
+  position: relative;
+}
+
+#message ul {
+  height: 109px;
+}
+
+#message ul li {
+  float: left;
+  width: 33%;
+  padding: 40px 80px;
+}
+
+#message ul li p, a {
+  color: #fff;
+  font-size: 14px;
+}
+
+#message form {
+  padding: 80px 80px;
+  text-align: left;
+}
+
+#message form input {
+  width: 300px;
+  padding: 12px 10px;
+  margin-right: 25px;
+  font-size: 16px;
+}
+
+#message form textarea {
+  padding: 12px 10px;
+  max-width: 956px;
+  min-width: 956px;
+  max-height: 225px;
+  min-height: 225px;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+#message form input[type='button'] {
+  width: 185px;
+  height: 48px;
+  background-color: #323B43;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#message form input[type='button']:hover {
+  color: #323B43;
+  background-color: #fff;
+}
+
+#result {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background: #323B43;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 3px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+/*图标字体区域*/
+
+.design:before {
+  content: '\e006';
+}
+
+.global:before {
+  content: '\e135';
+}
+
+.thumb:before {
+  content: '\e125';
+}
+
+.map:before {
+  content: '\e062';
+}
+
+.ecc:before {
+  content: '\e019';
+}
+
+.pencil:before {
+  content: '\270f';
+}
+
+.address:before {
+  content: '\e062';
+}
+
+.mail:before {
+  content: '\2709';
+}
+
+.tel:before {
+  content: '\e182';
+}
+
+/*页面底部版权信息*/
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #323B43;
+}
+
+/*返回顶部按钮样式*/
+
+#totop {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  right: 100px;
+  bottom: 100px;
+  background: url("images/arr.png") no-repeat;
+  display: none;
+}
+
+#totop:hover {
+  cursor: pointer;
+}
