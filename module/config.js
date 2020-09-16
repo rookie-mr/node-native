@@ -17,7 +17,7 @@ let config = {
   static: 'static',
   template: 'template',
   expires: 6000, // session时长
-  SessionIgnore: ['/login'],
+  SessionIgnore: ['/login', '/api/login'],
   SessionKey: 'session', // 存入客户端cookie的key
   SecretKey: GetKey(26, 16), // 服务端重启会变化的密钥
   db: {

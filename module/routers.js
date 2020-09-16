@@ -120,7 +120,7 @@ const routers = function () {
   })
 
   /**
-   * react-admin 后台管理接口部分含有 /api
+   * 后台管理接口部分含有 /api
    */
 
   // 管理系统的登录
